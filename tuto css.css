@@ -502,4 +502,35 @@ audio::-webkit-media-controls-rewind-button
 audio::-webkit-media-controls-return-to-realtime-button
 audio::-webkit-media-controls-toggle-closed-captions-button
 
+/* pour changer une image */
 
+#home img:hover
+{
+    content: url(../design/home_hover.png);
+    transition: 0.7s;
+}
+
+/* Modifier la couleur de selection */
+
+/* du texte sélectionné sera jaune sur fond rouge */
+::-moz-selection {
+	color: gold;
+	background-color: red;
+  }
+  
+  ::selection {
+	color: gold;
+	background-color: red;
+  }
+  
+  /* le texte sélectionné dans un paragraphe */
+  /* sera blanc sur noir                     */
+  p::-moz-selection {
+	color: white;
+	background-color: black;
+  }
+  
+  p::selection {
+	color: white;
+	background-color: black;
+  }

@@ -985,3 +985,63 @@ btn.addEventListener('click', function(event){
 	};
 	
 })
+
+// Validez les données saisies par vos utilisateurs
+
+// Validez les données suite à des événements
+
+myInput.addEventListener('input', function(e) {
+    var value = e.target.value;
+    if (value.startsWith('Hello ')) {
+        isValid = true;
+    } else {
+        isValid = false;
+    }
+});
+
+// Ou avec  Html 5
+
+// L'attribut  type  de la balise  input  ne prend pas seulement comme valeurs  text  et  password . Cela peut aussi être  email ,  tel ,  URL ,  date  et bien d'autres. 
+
+// Lorsque vous ajoutez un élément  input  avec un attribut  type="email" , le navigateur empêchera la soumission du formulaire si ce n'est pas une adresse email correcte.
+
+// Les  attributs de validation simples
+// En fonction du  type  de l' input , vous pouvez utiliser différents attributs pour perfectionner votre validation :
+
+// min  /  max  : fonctionne avec des champs de type nombre ou date. Cela permet de définir une valeur minimum et une valeur maximum autorisées ;
+
+// required  : fonctionne avec à peu près tous les types de champs. Cela rend obligatoire le remplissage de ce champ ;
+
+// step  : fonctionne avec les dates ou les nombres. Cela permet de définir une valeur d'incrément lorsque vous changez la valeur du champ via les flèches ;
+
+// minlength  /  maxlength  : fonctionne avec les champs textuels (  text ,  url ,  tel ,  email ...). Cela permet de définir un nombre de caractères minimum et maximum autorisé.
+
+// Nous avons vu qu'il était possible d'avoir une validation complexe grâce aux Regex en JavaScript. Eh bien c'est aussi possible directement en HTML5 avec l'attribut  pattern . Il suffit de définir une Regex dans cet attribut, et vous obligez la valeur du champ correspondant à la respecter.
+
+// Par exemple, si on prend le code suivant :
+
+<input type="text" pattern="[0-9]{,3}" />
+// il empêchera un utilisateur d'entrer autre chose que des chiffres, et limitera leur nombre à 3 chiffres.
+
+// ===================================
+
+
+
+
+
+
+
+
+
+
+
+// Bonus !:
+
+// Pour désactiver quelque chose:
+
+var btn = document.getElementById("weatherBtn");
+
+btn.addEventListener('click', function(event){
+	btn.disabled = true;
+	
+})
